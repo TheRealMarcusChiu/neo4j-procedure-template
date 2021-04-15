@@ -1,4 +1,4 @@
-package example;
+package example.functions;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.neo4j.procedure.UserFunction;
 public class Join {
 
     @UserFunction
-    @Description("example.join(['s1','s2',...], delimiter) - join the given strings with the given delimiter.")
+    @Description("example.join(['s1','s2',...], delimiter) - `RETURN example.functions.join(['s1','s2'], ' booo ')`")
     public String join(
             @Name("strings") List<String> strings,
             @Name(value = "delimiter", defaultValue = ",") String delimiter) {
